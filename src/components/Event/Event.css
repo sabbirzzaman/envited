@@ -32,11 +32,18 @@
     display: flex;
     gap: 30px;
     align-items: center;
+    justify-content: space-between;
     cursor: pointer;
     padding: 10px;
     border-radius: 10px;
     transition: .3s ease-in-out;
     margin-bottom: 10px;
+}
+
+.event-time-content, .event-address-content {
+    display: flex;
+    gap: 15px;
+    align-items: center;
 }
 
 .event-time:hover,.event-address:hover {
@@ -64,4 +71,65 @@
 
 .event-time .date span, .street {
     font-weight: 600;
+}
+
+
+/* Medium devices (landscape tablets, 689px and up) */
+@media only screen and (min-width: 689px) and (max-width: 992px) {
+    .event-container {
+        height: auto;
+        flex-direction: column-reverse;
+        padding: 50px 0;
+    }
+
+    .event-time, .event-address {
+        width: 350px;
+        gap: 20px;
+    }
+}
+
+/* Extra small devices (phones, 688px and down) */
+@media only screen and (max-width: 688px) {
+    .event-container {
+        height: auto;
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+
+    .event-section .container {
+        max-width: none;
+    }
+
+    .event-img {
+        width: 100%;
+    }
+    .host-info {
+        width: 310px;
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+
+    .event-time, .event-address {
+        width: 310px;
+        gap: 10px;
+        font-size: 14px;
+        margin: 0 auto;
+    }
+
+
+    .event-content {
+        width: 80%;
+        padding: 20px 0;
+    }
+
+    .event-time .icon, .event-address .icon {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 22px;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+    }
 }

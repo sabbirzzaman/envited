@@ -19,23 +19,31 @@ const Event = () => {
 
                     <div className="event-info">
                         <div className="event-time">
-                            <div className="icon">
-                                <VscCalendar />
-                            </div>
-                            <div className="date">
-                                <p><span>18 August 6:00PM</span></p>
-                                <p>to <span>19 August 1:00PM</span> UTC +10</p>
+                            <div className='event-time-content'>
+                                <div className="icon">
+                                    <VscCalendar />
+                                </div>
+                                <div className="date">
+                                    <p>
+                                        <span>18 August 6:00PM</span>
+                                    </p>
+                                    <p>
+                                        to <span>19 August 1:00PM</span> UTC +10
+                                    </p>
+                                </div>
                             </div>
                             <img src={arrow} alt="arrow" />
                         </div>
 
                         <div className="event-address">
-                            <div className="icon">
-                                <HiOutlineLocationMarker />
-                            </div>
-                            <div className="date">
-                                <p className='street'>Street name</p>
-                                <p>Suburb, State, Postcode</p>
+                            <div className='event-address-content'>
+                                <div className="icon">
+                                    <HiOutlineLocationMarker />
+                                </div>
+                                <div className="date">
+                                    <p className="street">Street name</p>
+                                    <p>Suburb, State, Postcode</p>
+                                </div>
                             </div>
                             <img src={arrow} alt="arrow" />
                         </div>
