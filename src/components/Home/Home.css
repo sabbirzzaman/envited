@@ -68,3 +68,39 @@
         width: 100%;
     }
 }
+
+/* Extra small devices (phones, 688px and down) */
+@media only screen and (max-width: 688px) {
+    .home-container {
+        flex-direction: column-reverse;
+        height: auto;
+        padding: 40px 0;
+    }
+
+    .home-img {
+        text-align: center;
+    }
+    
+    .home-img img {
+        width: 80%;
+        margin-bottom: 15px;
+    }
+
+    .home-content {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .home-content p {
+        font-size: 15px;
+        margin-bottom: 24px;
+    }
+
+    .home-content button {
+        display: none;
+    }
+
+    .hide-desktop button {
+        width: 90%;
+    }
+}
