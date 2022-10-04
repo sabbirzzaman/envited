@@ -6,8 +6,14 @@
 
 /* font style */
 h1 {
+    color: #240d57;
     font-size: 64px;
     line-height: 64px;
+}
+
+h2  {
+    color: #240d57;
+    font-size: 40px;
 }
 
 button {
