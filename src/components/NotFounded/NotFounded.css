@@ -1,0 +1,9 @@
+.not-founded {
+    display: flex;
+    background-color: #EDE5FF;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 20px;
+    gap: 10px;
+}

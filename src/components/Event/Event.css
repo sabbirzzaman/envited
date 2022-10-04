@@ -88,6 +88,15 @@
     }
 }
 
+.go-home {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fbfaff;
+}
+
 /* Extra small devices (phones, 688px and down) */
 @media only screen and (max-width: 688px) {
     .event-container {

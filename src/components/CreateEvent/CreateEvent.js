@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import './CreateEvent.css';
-import eventImg from '../../images/event.jpg';
-import { useNavigate } from 'react-router-dom';
+import eventImg from '../../images/event.png';
+import { Link, useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { addEvent } from '../../features/event/eventSlice';
+import { AiOutlineArrowLeft } from 'react-icons/ai';
 
 const CreateEvent = () => {
     const [eventName, setEventName] = useState('');
@@ -10,8 +13,11 @@ const CreateEvent = () => {
     const [endTime, setEndTime] = useState('');
 
     const navigate = useNavigate();
+    const dispatch = useDispatch();
 
-    const handleOnSubmit = () => {
+    const handleOnSubmit = (e) => {
+        e.preventDefault();
+
         const event = {
             eventName,
             hostName,
@@ -19,14 +25,21 @@ const CreateEvent = () => {
             endTime,
         };
 
-        navigate('/event')
-    }
+        dispatch(addEvent(event));
+
+        navigate('/event');
+    };
 
     return (
         <div className="create-event-section">
             <div className="container create-event-container">
                 <div className="create-event-form">
-                    <h2>Create Your Event</h2>
+                    <div className='create-event-header'>
+                        <h2>Create Your Event</h2>
+                        <Link className='back-btn' to="/">
+                            <AiOutlineArrowLeft />
+                        </Link>
+                    </div>
                     <form onSubmit={handleOnSubmit}>
                         <div className="field">
                             <label htmlFor="name">Event Name</label>
@@ -36,6 +49,7 @@ const CreateEvent = () => {
                                 placeholder="Enter event name"
                                 value={eventName}
                                 onChange={(e) => setEventName(e.target.value)}
+                                required
                             />
                         </div>
                         <div className="field">
@@ -46,6 +60,7 @@ const CreateEvent = () => {
                                 placeholder="Enter host name"
                                 value={hostName}
                                 onChange={(e) => setHostName(e.target.value)}
+                                required
                             />
                         </div>
                         <div className="field">
@@ -56,6 +71,7 @@ const CreateEvent = () => {
                                 placeholder="Start date and time"
                                 value={startTime}
                                 onChange={(e) => setStartTime(e.target.value)}
+                                required
                             />
                         </div>
                         <div className="field">
@@ -65,6 +81,7 @@ const CreateEvent = () => {
                                 type="datetime-local"
                                 value={endTime}
                                 onChange={(e) => setEndTime(e.target.value)}
+                                required
                             />
                         </div>
 

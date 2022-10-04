@@ -43,6 +43,22 @@
     outline-color: #501fc1;
 }
 
+.create-event-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.back-btn {
+    background-color: #8456ec;
+    font-size: 18px;
+    padding: 10px;
+    display: flex;
+    border-radius: 50%;
+    font-weight: 600;
+    color: white;
+}
+
 .submit-btn {
     padding: 10px;
     border-radius: 10px;

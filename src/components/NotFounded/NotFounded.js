@@ -1,10 +1,15 @@
 import React from 'react';
-import './NotFounded.css'
+import { Link } from 'react-router-dom';
+import './NotFounded.css';
+import { AiOutlineArrowLeft } from 'react-icons/ai';
 
 const NotFounded = () => {
     return (
-        <div>
-            not founded
+        <div className="not-founded">
+            <p>Page not founded!</p>
+            <Link className="back-btn" to="/">
+                <AiOutlineArrowLeft />
+            </Link>
         </div>
     );
 };
