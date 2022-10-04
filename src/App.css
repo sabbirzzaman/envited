@@ -11,7 +11,7 @@ h1 {
     line-height: 64px;
 }
 
-h2  {
+h2 {
     color: #240d57;
     font-size: 40px;
 }
@@ -38,9 +38,17 @@ button {
 
 /* Medium devices (landscape tablets, 689px and up) */
 @media only screen and (min-width: 689px) and (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+
     h1 {
         font-size: 48px;
         line-height: 50px;
+    }
+
+    h2 {
+        font-size: 34px;
     }
 
     .hide-desktop {
@@ -50,9 +58,19 @@ button {
 
 /* Extra small devices (phones, 688px and down) */
 @media only screen and (max-width: 688px) {
+    .container {
+        max-width: 325px;
+        margin: 0 auto;
+    }
+
     h1 {
         font-size: 36px;
         line-height: 38px;
+    }
+
+    h2 {
+        font-size: 30px;
+        line-height: 34px;
     }
 
     .hide-desktop {

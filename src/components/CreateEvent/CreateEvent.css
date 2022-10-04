@@ -1,5 +1,4 @@
 .create-event-section {
-    height: 100vh;
     background: #f6f2ff;
 }
 
@@ -62,4 +61,28 @@
 .create-event-img img {
     width: 80%;
     border-radius: 10px;
+}
+
+/* Medium devices (landscape tablets, 689px and up) */
+@media only screen and (min-width: 689px) and (max-width: 992px) {
+    .create-event-container {
+        height: 100vh;
+        padding: 50px 20px;
+    }
+
+    .create-event-img {
+        display: none;
+    }
+}
+
+/* Extra small devices (phones, 688px and down) */
+@media only screen and (max-width: 688px) {
+    .create-event-container {
+        height: 100vh;
+        padding: 50px 20px;
+    }
+
+    .create-event-img {
+        display: none;
+    }
 }

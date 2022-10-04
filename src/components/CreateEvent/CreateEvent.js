@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './CreateEvent.css';
 import eventImg from '../../images/event.jpg';
+import { useNavigate } from 'react-router-dom';
 
 const CreateEvent = () => {
     const [eventName, setEventName] = useState('');
@@ -8,19 +9,25 @@ const CreateEvent = () => {
     const [startTime, setStartTime] = useState('');
     const [endTime, setEndTime] = useState('');
 
-    const event = {
-        eventName,
-        hostName,
-        startTime,
-        endTime,
-    };
+    const navigate = useNavigate();
+
+    const handleOnSubmit = () => {
+        const event = {
+            eventName,
+            hostName,
+            startTime,
+            endTime,
+        };
+
+        navigate('/event')
+    }
 
     return (
         <div className="create-event-section">
             <div className="container create-event-container">
                 <div className="create-event-form">
                     <h2>Create Your Event</h2>
-                    <form>
+                    <form onSubmit={handleOnSubmit}>
                         <div className="field">
                             <label htmlFor="name">Event Name</label>
                             <input
