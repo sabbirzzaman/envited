@@ -1,12 +1,47 @@
 /* large screen css here */
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
 
- 
+/* font style */
+h1 {
+    font-size: 64px;
+    line-height: 64px;
+}
+
+button {
+    background: linear-gradient(90deg, #8456ec 3.25%, #e87bf8 100%);
+    border-radius: 10px;
+    padding: 16px 40px;
+    border: none;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.highlight {
+    background: linear-gradient(90deg, #8456ec 24.2%, #e87bf8 120.46%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hide-desktop {
+    display: none;
+}
+
 /* Medium devices (landscape tablets, 689px and up) */
 @media only screen and (min-width: 689px) and (max-width: 992px) {
-    
+    h1 {
+        font-size: 48px;
+        line-height: 50px;
+    }
+
+    .hide-desktop {
+        display: block;
+    }
 }
 
 /* Extra small devices (phones, 688px and down) */
 @media only screen and (max-width: 688px) {
-    
 }
